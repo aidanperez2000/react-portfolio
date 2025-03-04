@@ -4,6 +4,8 @@ import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 import '../styles/styles.css';
 import profileImage from "../assets/Profile.jpg";
+import { FaReact, FaPython, FaAws, FaCode } from "react-icons/fa";
+import { SiDotnet, SiJavascript, SiMysql } from "react-icons/si";
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
@@ -60,10 +62,51 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="p-10">
+      <section id="skills" className="p-10 bg-gray-100 dark:bg-gray-900 text-black">
         <h2 className="text-3xl font-bold text-center">Skills</h2>
-        <div className="mt-4 text-center">
-          <p>C#, React, Python, AWS, .NET, SQL, JavaScript, Machine Learning, Cloud Computing</p>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
+          
+          {/* React */}
+          <div className="p-6 bg-white dark:bg-black rounded-xl shadow-md hover:scale-105 transition">
+            <FaReact size={40} className="text-blue-500 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">React</h3>
+          </div>
+
+          {/* .NET */}
+          <div className="p-6 bg-white dark:bg-black rounded-xl shadow-md hover:scale-105 transition">
+            <SiDotnet size={40} className="text-indigo-600 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">.NET</h3>
+          </div>
+
+          {/* Python */}
+          <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition">
+            <FaPython size={40} className="text-yellow-500 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">Python</h3>
+          </div>
+
+          {/* JavaScript */}
+          <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition">
+            <SiJavascript size={40} className="text-yellow-400 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">JavaScript</h3>
+          </div>
+
+          {/* AWS */}
+          <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition">
+            <FaAws size={40} className="text-orange-500 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">AWS</h3>
+          </div>
+
+          {/* MySQL */}
+          <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition">
+            <SiMysql size={40} className="text-blue-600 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">MySQL</h3>
+          </div>
+
+          {/* General Coding */}
+          <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition">
+            <FaCode size={40} className="text-gray-500 mx-auto" />
+            <h3 className="text-lg font-semibold mt-2">Software Development</h3>
+          </div>
         </div>
       </section>
 
