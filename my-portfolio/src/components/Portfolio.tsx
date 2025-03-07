@@ -4,7 +4,10 @@ import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 import '../styles/styles.css';
 import profileImage from "../assets/Profile.jpg";
-import { FaReact, FaPython, FaAws, FaCode } from "react-icons/fa";
+import portfolioImage from "../assets/Portfolio.png";
+import springIntoActionImage from "../assets/SpringIntoAction.png";
+import lightsysImage from "../assets/Lightsys.png";
+import { FaReact, FaPython, FaAws, FaCode, FaGithub } from "react-icons/fa";
 import { SiDotnet, SiJavascript, SiMysql } from "react-icons/si";
 
 export default function Portfolio() {
@@ -14,7 +17,7 @@ export default function Portfolio() {
     <div className={darkMode ? "dark bg-gray-900 text-white min-h-screen" : "bg-white text-gray-900 min-h-screen"}>
       {/* Navbar */}
       <nav className="p-5 flex justify-between items-center shadow-md fixed top-0 left-0 w-full bg-white dark:bg-gray-900 z-50">
-        <h1 className="text-2xl font-bold">Aidan Perez</h1>
+        <h1 className="text-2xl font-bold text-black">Aidan Perez</h1>
         <ul className="flex space-x-6">
           <li><a href="#about" className="hover:text-blue-500">About</a></li>
           <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
@@ -113,14 +116,14 @@ export default function Portfolio() {
       {/* Experience Section */}
       <section id="experience" className="p-10">
         <h2 className="text-3xl font-bold text-center">Work Experience</h2>
-        <div className="mt-6 max-w-4xl mx-auto">
+        <div className="mt-6 max-w-4xl mx-auto text-gray-700 dark:text-gray-300">
           <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold">Software Engineer - AudiencePoint</h3>
-            <p className="text-gray-700 dark:text-gray-300">Developed scalable solutions using React, .NET, and AWS.</p>
+            <p>Developed scalable solutions using React, .NET, and AWS.</p>
           </div>
           <div className="mt-4 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold">Software Developer - Sawtooth Ventures</h3>
-            <p className="text-gray-700 dark:text-gray-300">Built a full-stack ranch management tool.</p>
+            <p>Built a full-stack ranch management tool.</p>
           </div>
         </div>
       </section>
@@ -143,19 +146,55 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="p-10 bg-gray-100 dark:bg-gray-800">
+      <section id="projects" className="p-10 bg-gray-100 dark:bg-gray-800 text-black">
         <h2 className="text-3xl font-bold text-center">Projects</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          
+          {/* Portfolio */}
           <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md"
             whileHover={{ scale: 1.05 }}>
-            <h3 className="text-xl font-semibold">JobIn</h3>
-            <p>AI-powered job search insights platform.</p>
+            <img src={portfolioImage} alt="Portfolio Project Screenshot" className="rounded-lg mb-4" />
+            <h3 className="text-xl font-semibold">Portfolio</h3>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">
+              Designed and developed a personal portfolio website using <strong>React</strong>, <strong>TailwindCSS</strong>, and <strong>Framer Motion</strong> for animations.
+              Features dark mode, smooth scrolling, and project showcases.
+            </p>
+            <a href="https://github.com/aidanperez2000/react-portfolio" target="_blank" rel="noopener noreferrer"
+              className="flex items-center text-blue-500 hover:text-blue-600 mt-3">
+              <FaGithub size={20} className="mr-2" /> View on GitHub
+            </a>
           </motion.div>
+
+          {/* Spring Into Action */}
           <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md"
             whileHover={{ scale: 1.05 }}>
-            <h3 className="text-xl font-semibold">Ranch Manager</h3>
-            <p>Full-stack farm management tool.</p>
+            <img src={springIntoActionImage} alt="Spring Into Action Project Screenshot" className="rounded-lg mb-4" />
+            <h3 className="text-xl font-semibold">Spring Into Action</h3>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">
+              Led the development of a <strong>sustainability competition website</strong> using <strong>C#</strong>, <strong>JavaScript</strong>, and <strong>HTML/CSS</strong>.
+              The platform encouraged students to participate in eco-friendly challenges and track their impact.
+            </p>
+            <a href="https://github.com/Gordon-YECA-Projects/SustainabilityCompetition" target="_blank" rel="noopener noreferrer"
+              className="flex items-center text-blue-500 hover:text-blue-600 mt-3">
+              <FaGithub size={20} className="mr-2" /> View on GitHub
+            </a>
           </motion.div>
+
+          {/* LightSys Events App */}
+          <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md"
+            whileHover={{ scale: 1.05 }}>
+            <img src={lightsysImage} alt="LightSys Events Project Screenshot" className="rounded-lg mb-4" />
+            <h3 className="text-xl font-semibold">LightSys Events App</h3>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">
+              Developed an event management mobile application using <strong>Swift</strong> to improve scheduling and user engagement.
+              The app allows users to register for events, receive notifications, and view event details in an intuitive interface.
+            </p>
+            <a href="https://github.com/LightSys/iOSEventApp" target="_blank" rel="noopener noreferrer"
+              className="flex items-center text-blue-500 hover:text-blue-600 mt-3">
+              <FaGithub size={20} className="mr-2" /> View on GitHub
+            </a>
+          </motion.div>
+
         </div>
       </section>
 
