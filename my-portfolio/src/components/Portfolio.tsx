@@ -7,6 +7,9 @@ import profileImage from "../assets/Profile.jpg";
 import portfolioImage from "../assets/Portfolio.png";
 import springIntoActionImage from "../assets/SpringIntoAction.png";
 import lightsysImage from "../assets/Lightsys.png";
+import audiencePointLogo from "../assets/AudiencePoint.jpeg";
+import sawtoothVenturesLogo from "../assets/SawtoothVentures.jpeg";
+import gordonCollegeLogo from "../assets/GordonCollege.png";
 import { FaReact, FaPython, FaAws, FaCode, FaGithub } from "react-icons/fa";
 import { SiDotnet, SiJavascript, SiMysql } from "react-icons/si";
 
@@ -117,19 +120,38 @@ export default function Portfolio() {
       <section id="experience" className="p-10">
         <h2 className="text-3xl font-bold text-center">Work Experience</h2>
         <div className="mt-6 max-w-4xl mx-auto text-gray-700 dark:text-gray-300">
-          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-            <h3 className="text-xl font-semibold">Software Engineer - AudiencePoint</h3>
-            <p>Developed scalable solutions using React, .NET, and AWS.</p>
-          </div>
-          <div className="mt-4 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-            <h3 className="text-xl font-semibold">Software Developer - Sawtooth Ventures</h3>
-            <p>Built a full-stack ranch management tool.</p>
-          </div>
+          <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md flex items-center"
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}>
+            <img src={audiencePointLogo} alt="AudiencePoint Logo" className="w-16 h-16 mr-4" />
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-semibold">Software Engineer - AudiencePoint</h3>
+              <p className="text-gray-600 dark:text-gray-300">May 2018 – Present</p>
+              <p>Engineered a high-performance marketing analytics platform using React, .NET 8, and AWS Fargate, improving data processing speed and scalability.</p>
+            </div>
+          </motion.div>
+          <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md flex items-center"
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}>
+            <img src={sawtoothVenturesLogo} alt="Sawtooth Ventures Logo" className="w-16 h-16 mr-4" />
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-semibold">Software Developer - Sawtooth Ventures</h3>
+              <p className="text-gray-600 dark:text-gray-300">Apr 2022 – Aug 2022</p>
+              <p>Developed a React & Airtable-based ranch management system, enabling streamlined livestock tracking and resource management.</p>
+            </div>
+          </motion.div>
+          <motion.div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md flex items-center"
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}>
+            <img src={gordonCollegeLogo} alt="Gordon College Logo" className="w-16 h-16 mr-4" />
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-semibold">Software Developer - GoCo Labs</h3>
+              <p className="text-gray-600 dark:text-gray-300">Feb 2021 – Apr 2021</p>
+              <p>Optimized event filtering by redesigning Gordon College’s events website with React and C#, improving navigation and user engagement.</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Education Section */}
-      <section id="education" className="p-10 bg-gray-100 dark:bg-gray-800">
+      <section id="education" className="p-10 bg-gray-100 dark:bg-gray-800 text-black">
         <h2 className="text-3xl font-bold text-center">Education</h2>
         <div className="mt-6 text-center">
           <p>Gordon College - B.S. in Computer Science, Minor in Data Science</p>
