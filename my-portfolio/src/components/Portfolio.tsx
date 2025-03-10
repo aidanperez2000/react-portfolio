@@ -20,7 +20,7 @@ export default function Portfolio() {
     <div className={darkMode ? "dark bg-gray-900 text-white min-h-screen" : "bg-white text-gray-900 min-h-screen"}>
       {/* Navbar */}
       <nav className="p-5 flex justify-between items-center shadow-md fixed top-0 left-0 w-full bg-white dark:bg-gray-900 z-50">
-        <h1 className="text-2xl font-bold text-black">Aidan Perez!</h1>
+        <h1 className="text-2xl font-bold text-black">Aidan Perez</h1>
         <ul className="flex space-x-6">
           <li><a href="#about" className="hover:text-blue-500">About</a></li>
           <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
