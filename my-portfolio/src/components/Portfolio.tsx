@@ -184,12 +184,44 @@ export default function Portfolio() {
       </section>
 
       {/* Hobbies Section */}
-      <section id="hobbies" className="p-10">
+      <section id="hobbies" className="p-10 bg-gray-100 dark:bg-gray-800 text-black">
         <h2 className="text-3xl font-bold text-center">Interests & Hobbies</h2>
-        <div className="mt-6 text-center">
-          <p>Music (Clarinet, Jazz Band), Rowing, Game Development, AI Research, Cooking</p>
+
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
+          {/* Music */}
+          <motion.div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition flex flex-col items-center"
+            whileHover={{ scale: 1.05 }}>
+            <span className="text-4xl">🎵</span>
+            <h3 className="text-lg font-semibold mt-2">Music</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Plays Clarinet & Bass Clarinet in symphonic bands.</p>
+          </motion.div>
+
+          {/* Rowing */}
+          <motion.div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition flex flex-col items-center"
+            whileHover={{ scale: 1.05 }}>
+            <span className="text-4xl">🚣‍♂️</span>
+            <h3 className="text-lg font-semibold mt-2">Rowing</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Former collegiate rower passionate about teamwork & endurance.</p>
+          </motion.div>
+
+          {/* Cooking */}
+          <motion.div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition flex flex-col items-center"
+            whileHover={{ scale: 1.05 }}>
+            <span className="text-4xl">👨‍🍳</span>
+            <h3 className="text-lg font-semibold mt-2">Cooking</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Loves experimenting with new recipes.</p>
+          </motion.div>
+
+          {/* Travel */}
+          <motion.div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:scale-105 transition flex flex-col items-center"
+            whileHover={{ scale: 1.05 }}>
+            <span className="text-4xl">✈️</span>
+            <h3 className="text-lg font-semibold mt-2">Travel</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Enjoys discovering new places & cultures.</p>
+          </motion.div>
         </div>
       </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="p-10 bg-gray-100 dark:bg-gray-800 text-black">
